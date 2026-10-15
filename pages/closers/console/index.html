@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Artemis · Closer console</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#06060A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--void:#06060A;--ink:#0B0B12;--ink2:#10111C;--rose:#B76E79;--rose-l:#E3A9A2;--bone:#EDE6DA;--bone2:#CFC7BA;--dim:#8A8594;--rule:rgba(237,230,218,.12);--rule2:rgba(183,110,121,.35);--ok:#7FC7A0;--warn:#D9A55B;--mid:#191970;
+--d:'Bodoni Moda',Didot,Georgia,serif;--s:'EB Garamond',Garamond,Georgia,serif;--m:'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--void);color:var(--bone)}
+body{font-family:var(--s);font-size:17px;line-height:1.55;min-height:100vh;-webkit-font-smoothing:antialiased;background:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(25,25,112,.45),transparent 60%),radial-gradient(ellipse 50% 40% at 0% 100%,rgba(183,110,121,.10),transparent 70%),var(--void)}
+a{color:var(--rose-l)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(14px,3vw,32px)}
+header{position:sticky;top:0;z-index:20;background:rgba(6,6,10,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.hbar{display:flex;align-items:center;gap:16px;height:60px}
+.brand{font-family:var(--d);font-size:21px;font-weight:600;white-space:nowrap}.brand em{font-style:italic;font-weight:400;color:var(--rose-l)}
+.stats{display:flex;gap:14px;font-family:var(--m);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-left:auto;flex-wrap:wrap}
+.stats b{color:var(--bone);font-weight:600}
+.hype{font-family:var(--d);font-style:italic;font-size:clamp(20px,2.6vw,30px);color:var(--rose-l);padding:22px 0 6px;min-height:2.4em;perspective:600px}
+.hype span{display:inline-block;animation:flip .7s cubic-bezier(.2,.8,.2,1)}
+@keyframes flip{from{opacity:0;transform:rotateX(-70deg) translateY(10px)}to{opacity:1;transform:none}}
+.duo{font-family:var(--m);font-size:12px;letter-spacing:.06em;color:var(--dim);margin-bottom:14px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 18px}
+.tab{font-family:var(--m);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:10px 14px;border:1px solid var(--rule);background:transparent;color:var(--bone2);cursor:pointer}
+.tab[aria-selected="true"]{border-color:var(--rose-l);color:var(--bone);background:rgba(183,110,121,.12)}
+.grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.9fr);gap:18px;align-items:start}
+@media(max-width:940px){.grid{grid-template-columns:1fr}}
+.card{border:1px solid var(--rule2);background:linear-gradient(180deg,#0E0F1E,#08080E);box-shadow:0 40px 120px -50px rgba(25,25,112,.9);transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.card.fly{transform:perspective(1200px) rotateY(-14deg) translateX(40px);opacity:.2}
+.ch{display:flex;justify-content:space-between;gap:10px;padding:12px 16px;border-bottom:1px solid var(--rule);font-family:var(--m);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.cb{padding:16px}
+.firm{font-family:var(--d);font-size:clamp(26px,3vw,38px);line-height:1.05;font-weight:600}
+.meta{font-family:var(--m);font-size:13px;color:var(--bone2);margin:6px 0 12px;display:flex;gap:12px;flex-wrap:wrap}
+.meta a{color:var(--bone2)}
+.badge{display:inline-block;font-family:var(--m);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--rule2);color:var(--rose-l)}
+.badge.form{color:var(--warn);border-color:rgba(217,165,91,.45)}
+label.f{display:block;font-family:var(--m);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:12px 0 6px}
+input.f,textarea.f{width:100%;font-family:var(--s);font-size:16px;padding:10px 12px;border:1px solid var(--rule);background:#07070C;color:var(--bone)}
+textarea.f{min-height:300px;resize:vertical;line-height:1.5}
+.acts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
+@media(max-width:560px){.acts{grid-template-columns:1fr 1fr}}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;font-family:var(--m);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:12px;border:1px solid var(--rule2);color:var(--bone);background:transparent;cursor:pointer;text-decoration:none;text-align:center}
+.btn.go{background:linear-gradient(135deg,#C98A8F,#B76E79 45%,#8C4F59);border-color:transparent;color:#140A0C}
+.btn.ok{background:rgba(127,199,160,.14);border-color:rgba(127,199,160,.5)}
+.btn[disabled],.btn.off{opacity:.35;pointer-events:none}
+.btn kbd{font-family:var(--m);font-size:10px;border:1px solid currentColor;padding:1px 5px;opacity:.7}
+.warn{font-family:var(--m);font-size:12.5px;color:var(--warn);margin-top:10px}
+.nav2{display:flex;justify-content:space-between;gap:8px;margin-top:10px}
+.nav2 .btn{min-height:40px;font-size:11px}
+.list{border:1px solid var(--rule);background:var(--ink)}
+.row{display:grid;grid-template-columns:18px 1fr auto;gap:10px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--rule);cursor:pointer;font-size:15px}
+.row:hover{background:rgba(183,110,121,.06)}
+.row.cur{background:rgba(183,110,121,.14)}
+.row .dot{width:10px;height:10px;border-radius:50%;background:var(--dim)}
+.row .dot.sent{background:var(--ok)} .row .dot.skipped{background:#444} .row .dot.replied{background:var(--rose-l)}
+.row small{display:block;font-family:var(--m);font-size:11px;color:var(--dim)}
+.sig{font-family:var(--m);font-size:11px;color:var(--dim);text-align:right;white-space:nowrap}
+.sig b{color:var(--rose-l);font-weight:600}
+.panel{border:1px solid var(--rule);background:var(--ink2);padding:16px;margin-bottom:14px}
+.panel h3{font-family:var(--d);font-size:22px;margin-bottom:6px}
+.panel p{color:var(--bone2);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:560px){.two{grid-template-columns:1fr}}
+.gate{max-width:520px;margin:12vh auto;padding:24px;border:1px solid var(--rule2);background:var(--ink2)}
+.gate h1{font-family:var(--d);font-size:40px;font-weight:500}
+.bk{border-bottom:1px solid var(--rule);padding:10px 0;font-size:15px}
+.bk b{font-family:var(--m);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--rose-l)}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#1a1320;border:1px solid var(--rule2);padding:10px 16px;font-family:var(--m);font-size:13px;z-index:50;opacity:0;transition:opacity .25s}
+.toast.on{opacity:1}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--rose-l);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="gate" class="gate" hidden>
+  <h1>Artemis <em style="color:var(--rose-l)">console</em></h1>
+  <p style="color:var(--bone2);margin:8px 0 16px">Operator key, please. It stays in this browser only.</p>
+  <input class="f" id="keyIn" type="password" autocomplete="off" placeholder="Console key">
+  <button class="btn go" id="keyBtn" style="margin-top:12px;width:100%">Unlock</button>
+  <p class="warn" id="gateMsg"></p>
+</div>
+
+<div id="app" hidden>
+<header><div class="wrap hbar">
+  <div class="brand">Artemis <em>closes</em></div>
+  <div class="stats"><span>Sent <b id="sSent">0</b></span><span>Opened <b id="sOpen">0</b></span><span>Talked <b id="sTalk">0</b></span><span>Booked <b id="sBook">0</b></span><span>Left <b id="sLeft">0</b></span></div>
+</div></header>
+<main class="wrap">
+  <p class="hype" id="hype"><span>Targets loaded. Coffee optional. Sending mandatory.</span></p>
+  <p class="duo" id="duo">Artemis closes · Leto sets · you click</p>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-tab="pi" aria-selected="true">US law <span id="nPi"></span></button>
+    <button class="tab" role="tab" data-tab="dental" aria-selected="false">US dental <span id="nDn"></span></button>
+    <button class="tab" role="tab" data-tab="au" aria-selected="false">Warm AU · SMS</button>
+    <button class="tab" role="tab" data-tab="id" aria-selected="false">Indonesia · WhatsApp</button>
+    <button class="tab" role="tab" data-tab="booked" aria-selected="false">Replies &amp; bookings <span id="nBk"></span></button>
+    <button class="tab" role="tab" data-tab="settings" aria-selected="false">Settings</button>
+  </div>
+
+  <section id="vQueue">
+    <div class="grid">
+      <div>
+        <div class="card" id="card">
+          <div class="ch"><span id="cPos">1 / 20</span><span id="cStatus">not sent</span></div>
+          <div class="cb">
+            <p class="firm" id="cFirm">·</p>
+            <div class="meta"><span id="cPerson"></span><span id="cCity"></span><a id="cSite" target="_blank" rel="noopener noreferrer"></a><a id="cTel"></a><span class="badge" id="cChan">Email</span></div>
+            <label class="f" for="cTo" id="cToL">To</label><input class="f" id="cTo">
+            <label class="f" for="cSubj">Subject</label><input class="f" id="cSubj">
+            <label class="f" for="cBody">Message (edit freely)</label><textarea class="f" id="cBody"></textarea>
+            <div class="acts">
+              <a class="btn go" id="aSend" target="_blank" rel="noopener">Open Gmail <kbd>G</kbd></a>
+              <a class="btn" id="aAlt" target="_blank" rel="noopener">Mail app</a>
+              <button class="btn ok" id="aDone" type="button">Sent · next <kbd>S</kbd></button>
+              <button class="btn" id="aSkip" type="button">Skip <kbd>X</kbd></button>
+            </div>
+            <p class="warn" id="cWarn" hidden></p>
+            <div class="nav2"><button class="btn" id="aPrev" type="button">← Prev</button><button class="btn" id="aCopy" type="button">Copy message <kbd>C</kbd></button><button class="btn" id="aReplied" type="button">They replied</button><button class="btn" id="aNext" type="button">Next →</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="list" id="list"></div>
+    </div>
+  </section>
+
+  <section id="vWarm" hidden>
+    <div class="panel"><h3 id="wTitle">Warm AU contacts</h3><p id="wSub">People who already know you. Text from your phone: this opens Messages with the text filled in.</p></div>
+    <div class="grid"><div>
+      <div class="card"><div class="cb">
+        <div class="two"><div><label class="f">Name</label><input class="f" id="wName" placeholder="First name"></div><div><label class="f">Mobile</label><input class="f" id="wPhone" placeholder="0412 345 678 or +61..."></div></div>
+        <label class="f">Business</label><input class="f" id="wBiz" placeholder="Their business name">
+        <label class="f">Message</label><textarea class="f" id="wMsg" style="min-height:190px"></textarea>
+        <div class="acts"><a class="btn go" id="wSms">Text it <kbd>T</kbd></a><a class="btn" id="wWa" target="_blank" rel="noopener">WhatsApp</a><button class="btn ok" id="wAdd" type="button">Log as sent</button><button class="btn" id="wCopy" type="button">Copy</button></div>
+      </div></div>
+    </div><div class="list" id="wList"></div></div>
+  </section>
+
+  <section id="vBooked" hidden><div class="panel"><h3>Replies &amp; bookings</h3><p>Everything Artemis or the page form captured. Reply fast: Sydney is a day ahead.</p></div><div id="bList"></div></section>
+
+  <section id="vSettings" hidden>
+    <div class="panel">
+      <h3>Sender</h3>
+      <p>The Gmail button opens a compose window in this Google account. Pick the account you want replies to land in.</p>
+      <label class="f">Gmail account</label><input class="f" id="setAcct" placeholder="hecate@witch.codes">
+      <label class="f">Signature name</label><input class="f" id="setName" placeholder="Rio Kho">
+      <label class="f">Postal address (US anti-spam law requires one in every sales email; a PO box or registered business address works)</label><input class="f" id="setPostal" placeholder="PO Box ..., Sydney NSW 2000, Australia">
+      <label class="f">BCC yourself (optional)</label><input class="f" id="setBcc" placeholder="">
+      <button class="btn go" id="setSave" type="button" style="margin-top:12px">Save</button>
+    </div>
+    <div class="panel"><h3>Rules Artemis won't break</h3><p>US strangers: email or their own contact form only. No cold texts and no AI cold calls to US numbers (FCC 24-17: AI voices are "artificial" under the TCPA, so they need prior consent). Texts and WhatsApp go to people who already know you. Anyone who says no is marked skipped for good.</p></div>
+    <div class="panel"><h3>Key</h3><p>Stored in this browser only.</p><button class="btn" id="setForget" type="button" style="margin-top:10px">Forget key on this device</button></div>
+  </section>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var LS = { get: function (k, d) { try { var v = localStorage.getItem(k); return v == null ? d : v; } catch (e) { return d; } }, set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }, del: function (k) { try { localStorage.removeItem(k); } catch (e) {} } };
+  var KEY = '';
+  var m = /[#&]k=([^&]+)/.exec(location.hash); if (m) { KEY = decodeURIComponent(m[1]); LS.set('wc_key', KEY); history.replaceState(null, '', location.pathname); } else KEY = LS.get('wc_key', '');
+  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var S = { acct: LS.get('wc_acct', 'hecate@witch.codes'), name: LS.get('wc_name', 'Rio Kho'), postal: LS.get('wc_postal', ''), bcc: LS.get('wc_bcc', '') };
+  var D = { prospects: [], status: {}, open: {}, talk: {}, booked: {}, bookings: [] };
+  var tab = 'pi', idx = 0;
+  var HYPE = [
+    'Target acquired. Next.', 'I once negotiated $2 off a coffee like it was a merger. Send the next one.', 'Leto says drink water. I say SEND.',
+    'Every unsent email is an 11pm caller ringing someone else.', 'Momentum is a strategy. Click.', 'They said 24/7. We said prove it.',
+    'Hunting season. Politely. Lawfully. Relentlessly.', 'Chief of Sales of the World: application in progress.', 'Another one. Leto is proud. I am insatiable.',
+    'You click, I close. That is the whole org chart.', 'Stretch your fingers. Then send eight more.', 'A dentist at 7pm is a dentist with voicemail. Fix that.'
+  ];
+  function hype(t) { var h = $('hype'); h.innerHTML = ''; var s = document.createElement('span'); s.textContent = t || HYPE[Math.floor(Math.random() * HYPE.length)]; h.appendChild(s); }
+  function toast(t) { var e = $('toast'); e.textContent = t; e.classList.add('on'); clearTimeout(e._t); e._t = setTimeout(function () { e.classList.remove('on'); }, 1600); }
+  function api(path, opts) { opts = opts || {}; opts.headers = Object.assign({ 'x-closers-key': KEY }, opts.headers || {}); return fetch(path, opts).then(function (r) { return r.json().then(function (j) { if (r.status === 401) throw new Error('unauthorized'); return j; }); }); }
+
+  function gate(msg) { $('app').hidden = true; $('gate').hidden = false; $('gateMsg').textContent = msg || ''; $('keyIn').focus(); }
+  $('keyBtn').onclick = function () { KEY = $('keyIn').value.trim(); LS.set('wc_key', KEY); load(); };
+  $('keyIn').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('keyBtn').click(); });
+
+  function load() {
+    if (!KEY) return gate();
+    api('/closers/api/queue').then(function (j) {
+      if (!j.ok) throw new Error(j.error || 'failed');
+      D.prospects = j.prospects; D.status = {}; D.open = {}; D.talk = {}; D.booked = {}; D.bookings = j.bookings || [];
+      (j.marks || []).slice().reverse().forEach(function (r) { D.status[r.token] = r.type.replace('mark_', ''); });
+      Object.keys(D.status).forEach(function (t) { if (D.status[t] === 'reset') delete D.status[t]; });
+      (j.events || []).forEach(function (r) {
+        if (r.type === 'open') D.open[r.token] = r.n;
+        if (r.type === 'talk_live') D.talk[r.token] = r.n;
+        if (/^booked_/.test(r.type) && r.type !== 'booked_opt_out') D.booked[r.token] = (D.booked[r.token] || 0) + r.n;
+        if (r.type === 'booked_opt_out') D.status[r.token] = 'skipped';
+      });
+      $('gate').hidden = true; $('app').hidden = false;
+      render();
+    }).catch(function (e) { gate(e.message === 'unauthorized' ? 'That key didn’t work.' : 'Couldn’t load the queue: ' + e.message); });
+  }
+  function list() { return D.prospects.filter(function (p) { return p.seg === tab; }); }
+  function bodyOf(p) { var b = p.body.replace('{POSTAL}', S.postal || '[POSTAL ADDRESS REQUIRED]'); if (S.name && S.name !== 'Rio Kho') b = b.replace(/^Rio Kho$/m, S.name); return b; }
+  function counts() {
+    var all = D.prospects, sent = all.filter(function (p) { return D.status[p.id] === 'sent' || D.status[p.id] === 'replied'; }).length;
+    $('sSent').textContent = sent; $('sOpen').textContent = Object.keys(D.open).length; $('sTalk').textContent = Object.keys(D.talk).length;
+    $('sBook').textContent = D.bookings.filter(function (b) { return b.want !== 'opt_out'; }).length; $('sLeft').textContent = all.filter(function (p) { return !D.status[p.id]; }).length;
+    var pi = D.prospects.filter(function (p) { return p.seg === 'pi'; }), dn = D.prospects.filter(function (p) { return p.seg === 'dental'; });
+    $('nPi').textContent = '(' + pi.filter(function (p) { return !D.status[p.id]; }).length + ')'; $('nDn').textContent = '(' + dn.filter(function (p) { return !D.status[p.id]; }).length + ')';
+    $('nBk').textContent = D.bookings.length ? '(' + D.bookings.length + ')' : '';
+  }
+  function gmailURL(p, to, subj, body) {
+    var q = 'view=cm&fs=1&tf=1&to=' + encodeURIComponent(to) + '&su=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body) + (S.bcc ? '&bcc=' + encodeURIComponent(S.bcc) : '');
+    return 'https://mail.google.com/mail/?authuser=' + encodeURIComponent(S.acct || '') + '&' + q;
+  }
+  function mailtoURL(to, subj, body) { return 'mailto:' + encodeURIComponent(to).replace(/%40/g, '@') + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body) + (S.bcc ? '&bcc=' + encodeURIComponent(S.bcc) : ''); }
+  function show() {
+    var L = list(); if (!L.length) return; if (idx >= L.length) idx = L.length - 1; if (idx < 0) idx = 0;
+    var p = L[idx], email = !!p.email, st = D.status[p.id];
+    $('cPos').textContent = (idx + 1) + ' / ' + L.length;
+    $('cStatus').textContent = (st || 'not sent') + (D.open[p.id] ? ' · opened ' + D.open[p.id] + '×' : '') + (D.talk[p.id] ? ' · talked' : '') + (D.booked[p.id] ? ' · BOOKED' : '');
+    $('cFirm').textContent = p.firm; $('cPerson').textContent = p.person; $('cCity').textContent = p.city + ', ' + p.state;
+    $('cSite').textContent = p.site; $('cSite').href = 'https://' + p.site; $('cTel').textContent = p.phone || ''; $('cTel').href = p.phone ? 'tel:' + p.phone.replace(/[^\d+]/g, '') : '#';
+    $('cChan').textContent = email ? 'Email' : 'Contact form'; $('cChan').className = 'badge' + (email ? '' : ' form');
+    $('cToL').textContent = email ? 'To' : 'Their contact form';
+    $('cTo').value = email ? p.email : p.form; $('cSubj').value = p.subject;
+    $('cSubj').parentNode; $('cSubj').disabled = !email;
+    $('cBody').value = email ? bodyOf(p) : p.form_msg;
+    wire();
+    [].forEach.call(document.querySelectorAll('#list .row'), function (r, i) { r.classList.toggle('cur', i === idx); });
+  }
+  function wire() {
+    var L = list(), p = L[idx]; if (!p) return; var email = !!p.email;
+    var to = $('cTo').value.trim(), subj = $('cSubj').value, body = $('cBody').value;
+    var needPostal = email && (!S.postal || /\[POSTAL ADDRESS REQUIRED\]/.test(body));
+    if (email) {
+      $('aSend').innerHTML = 'Open Gmail <kbd>G</kbd>'; $('aSend').href = gmailURL(p, to, subj, body); $('aSend').target = '_blank';
+      $('aAlt').hidden = false; $('aAlt').textContent = 'Mail app'; $('aAlt').href = mailtoURL(to, subj, body); $('aAlt').target = '_self';
+    } else {
+      $('aSend').innerHTML = 'Copy + open form <kbd>G</kbd>'; $('aSend').href = p.form; $('aSend').target = '_blank';
+      $('aAlt').hidden = true;
+    }
+    $('aSend').classList.toggle('off', needPostal); $('aAlt').classList.toggle('off', needPostal);
+    $('cWarn').hidden = !needPostal; $('cWarn').textContent = needPostal ? 'Add your postal address in Settings first. US law requires it in every sales email.' : '';
+  }
+  ['cTo', 'cSubj', 'cBody'].forEach(function (id) { $(id).addEventListener('input', wire); });
+  function renderList() {
+    var el = $('list'); el.innerHTML = '';
+    list().forEach(function (p, i) {
+      var r = document.createElement('div'); r.className = 'row' + (i === idx ? ' cur' : '');
+      var d = document.createElement('span'); d.className = 'dot ' + (D.status[p.id] || ''); r.appendChild(d);
+      var n = document.createElement('div'); n.textContent = p.firm; var sm = document.createElement('small'); sm.textContent = p.city + ', ' + p.state + ' · ' + (p.email ? 'email' : 'form'); n.appendChild(sm); r.appendChild(n);
+      var sg = document.createElement('div'); sg.className = 'sig'; sg.innerHTML = (D.booked[p.id] ? '<b>★ booked</b> ' : '') + (D.talk[p.id] ? '<b>🎙</b> ' : '') + (D.open[p.id] ? '👁 ' + D.open[p.id] : ''); r.appendChild(sg);
+      r.onclick = function () { idx = i; show(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+      el.appendChild(r);
+    });
+  }
+  function render() { counts(); if (tab === 'pi' || tab === 'dental') { renderList(); var L = list(); var first = L.findIndex(function (p) { return !D.status[p.id]; }); if (idx === 0 && first > 0) idx = first; show(); } if (tab === 'booked') renderBooked(); }
+  function mark(status) {
+    var p = list()[idx]; if (!p) return;
+    D.status[p.id] = status; counts(); renderList();
+    api('/closers/api/mark', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ t: p.id, status: status, channel: p.email ? 'email' : 'form' }) })
+      .then(function (j) { if (!j.ok) toast('Not saved: ' + j.error); }).catch(function () { toast('Not saved (offline). Will show as sent here only.'); });
+  }
+  function next() { var L = list(); var j = L.findIndex(function (p, i) { return i > idx && !D.status[p.id]; }); if (j < 0) j = L.findIndex(function (p) { return !D.status[p.id]; }); if (j < 0) { hype('Queue cleared. Leto made tea. I want MORE targets.'); return; } var c = $('card'); c.classList.add('fly'); setTimeout(function () { idx = j; show(); c.classList.remove('fly'); }, 220); }
+  function copy(t) { if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { toast('Copied'); }, function () { toast('Copy failed: select and copy'); }); }
+  $('aSend').addEventListener('click', function (e) { var p = list()[idx]; if (p && !p.email) copy($('cBody').value); });
+  $('aDone').onclick = function () { mark('sent'); hype(); next(); };
+  $('aSkip').onclick = function () { mark('skipped'); next(); };
+  $('aReplied').onclick = function () { mark('replied'); hype('A REPLY. I am calm. I am extremely calm.'); };
+  $('aPrev').onclick = function () { idx = Math.max(0, idx - 1); show(); };
+  $('aNext').onclick = function () { idx = Math.min(list().length - 1, idx + 1); show(); };
+  $('aCopy').onclick = function () { copy($('cBody').value); };
+  document.addEventListener('keydown', function (e) {
+    if (/INPUT|TEXTAREA|SELECT/.test((e.target || {}).tagName) || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (tab === 'pi' || tab === 'dental') {
+      var k = e.key.toLowerCase();
+      if (k === 'g') { e.preventDefault(); $('aSend').click(); } else if (k === 's') { e.preventDefault(); $('aDone').click(); } else if (k === 'x') { $('aSkip').click(); } else if (k === 'c') { $('aCopy').click(); } else if (e.key === 'ArrowRight') { $('aNext').click(); } else if (e.key === 'ArrowLeft') { $('aPrev').click(); }
+    } else if ((tab === 'au' || tab === 'id') && e.key.toLowerCase() === 't') { e.preventDefault(); $('wSms').click(); }
+  });
+
+  /* warm lists (this browser only) */
+  var TPL = {
+    au: "Hey {name}, Rio here. I've built an AI receptionist that answers every call to {biz} 24/7, books straight into your diary and texts back anyone who hangs up. Want me to load it with your website so you can ring it and hear it yourself? If you like it, it's on your real line within 48 hours: A$3,500 setup, A$1,200 a month, 3 months minimum. If it hasn't caught 10 enquiries you'd otherwise have missed in the first 30 days, I refund the setup.",
+    id: "Halo {name}, ini Rio. Saya baru bikin resepsionis AI yang bisa angkat semua telepon ke {biz} 24 jam, jawab pertanyaan pelanggan, langsung atur jadwal, dan kirim ringkasannya ke tim Anda. Mau saya buatkan versi coba pakai info dari website Anda? Jadi Anda bisa telepon dan dengar sendiri. Gratis, tanpa kewajiban."
+  };
+  function warmMsg() { return TPL[tab].replace('{name}', $('wName').value.trim() || '').replace(/Hey ,|Halo ,/, tab === 'au' ? 'Hey,' : 'Halo,').replace('{biz}', $('wBiz').value.trim() || (tab === 'au' ? 'your business' : 'usaha Anda')); }
+  function normPhone(v) { v = (v || '').replace(/[^\d+]/g, ''); if (tab === 'au' && /^0\d{9}$/.test(v)) v = '+61' + v.slice(1); if (tab === 'id' && /^0\d{8,12}$/.test(v)) v = '+62' + v.slice(1); return v; }
+  function wireWarm() {
+    var body = $('wMsg').dataset.dirty ? $('wMsg').value : warmMsg(); if (!$('wMsg').dataset.dirty) $('wMsg').value = body;
+    var ph = normPhone($('wPhone').value);
+    $('wSms').href = 'sms:' + ph + (isIOS ? '&' : '?') + 'body=' + encodeURIComponent(body);
+    $('wWa').href = 'https://wa.me/' + ph.replace(/^\+/, '') + '?text=' + encodeURIComponent(body);
+    $('wSms').classList.toggle('off', ph.length < 8); $('wWa').classList.toggle('off', ph.length < 8);
+  }
+  ['wName', 'wPhone', 'wBiz'].forEach(function (id) { $(id).addEventListener('input', wireWarm); });
+  $('wMsg').addEventListener('input', function () { $('wMsg').dataset.dirty = '1'; wireWarm(); });
+  function warmKey() { return 'wc_warm_' + tab; }
+  function warmList() { try { return JSON.parse(LS.get(warmKey(), '[]')); } catch (e) { return []; } }
+  function renderWarm() {
+    var el = $('wList'); el.innerHTML = ''; warmList().forEach(function (w) { var r = document.createElement('div'); r.className = 'row'; r.innerHTML = '<span class="dot sent"></span>'; var d = document.createElement('div'); d.textContent = w.name + ' · ' + w.biz; var sm = document.createElement('small'); sm.textContent = w.phone + ' · ' + w.at; d.appendChild(sm); r.appendChild(d); r.appendChild(document.createElement('span')); el.appendChild(r); });
+  }
+  $('wAdd').onclick = function () { var l = warmList(); l.unshift({ name: $('wName').value.trim(), biz: $('wBiz').value.trim(), phone: normPhone($('wPhone').value), at: new Date().toLocaleString() }); LS.set(warmKey(), JSON.stringify(l.slice(0, 300))); ['wName', 'wPhone', 'wBiz'].forEach(function (id) { $(id).value = ''; }); delete $('wMsg').dataset.dirty; wireWarm(); renderWarm(); hype(); $('wName').focus(); };
+  $('wCopy').onclick = function () { copy($('wMsg').value); };
+
+  function renderBooked() {
+    var el = $('bList'); el.innerHTML = '';
+    if (!D.bookings.length) { el.innerHTML = '<p style="color:var(--dim)">Nothing yet. Keep clicking.</p>'; return; }
+    var by = {}; D.prospects.forEach(function (p) { by[p.id] = p; });
+    D.bookings.forEach(function (b) {
+      var p = by[b.token], d = document.createElement('div'); d.className = 'bk';
+      var h = document.createElement('b'); h.textContent = (b.want || '').replace('_', ' ') + ' · ' + b.source + ' · ' + b.created_at + ' UTC'; d.appendChild(h);
+      var t = document.createElement('div'); t.textContent = (p ? p.firm + ' (' + p.city + ') · ' : '') + [b.name, b.role, b.email, b.phone, b.best_time].filter(Boolean).join(' · '); d.appendChild(t);
+      if (b.notes) { var n = document.createElement('div'); n.style.color = 'var(--bone2)'; n.textContent = b.notes; d.appendChild(n); }
+      if (b.email && b.want !== 'opt_out') { var a = document.createElement('a'); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Reply in Gmail →'; a.href = gmailURL(null, b.email, 'Your free week' + (p ? ' for ' + p.firm : ''), 'Hi ' + ((b.name || '').split(' ')[0] || 'there') + ',\n\nThanks for talking to Artemis. \n\n' + S.name); d.appendChild(a); }
+      el.appendChild(d);
+    });
+  }
+
+  /* tabs + settings */
+  [].forEach.call(document.querySelectorAll('.tab'), function (b) { b.onclick = function () {
+    tab = b.dataset.tab; [].forEach.call(document.querySelectorAll('.tab'), function (x) { x.setAttribute('aria-selected', String(x === b)); });
+    $('vQueue').hidden = !(tab === 'pi' || tab === 'dental'); $('vWarm').hidden = !(tab === 'au' || tab === 'id'); $('vBooked').hidden = tab !== 'booked'; $('vSettings').hidden = tab !== 'settings';
+    if (tab === 'au' || tab === 'id') { $('wTitle').textContent = tab === 'au' ? 'Warm AU contacts' : 'Indonesia · warm contacts'; $('wSub').textContent = tab === 'au' ? 'People who already know you. On your phone, "Text it" opens Messages with the text filled in.' : 'Orang yang sudah kenal Anda. WhatsApp opens with the Bahasa message filled in.'; $('wSms').innerHTML = tab === 'au' ? 'Text it <kbd>T</kbd>' : 'SMS <kbd>T</kbd>'; delete $('wMsg').dataset.dirty; wireWarm(); renderWarm(); }
+    idx = 0; render();
+  }; });
+  $('setAcct').value = S.acct; $('setName').value = S.name; $('setPostal').value = S.postal; $('setBcc').value = S.bcc;
+  $('setSave').onclick = function () { S.acct = $('setAcct').value.trim(); S.name = $('setName').value.trim() || 'Rio Kho'; S.postal = $('setPostal').value.trim(); S.bcc = $('setBcc').value.trim(); LS.set('wc_acct', S.acct); LS.set('wc_name', S.name); LS.set('wc_postal', S.postal); LS.set('wc_bcc', S.bcc); toast('Saved'); if (tab === 'pi' || tab === 'dental') show(); };
+  $('setForget').onclick = function () { LS.del('wc_key'); KEY = ''; gate('Key forgotten on this device.'); };
+  load();
+  setInterval(function () { if (!document.hidden && KEY && !$('app').hidden) api('/closers/api/queue').then(function (j) { if (!j.ok) return; var before = D.bookings.length; D.bookings = j.bookings || []; D.open = {}; D.talk = {}; D.booked = {}; (j.events || []).forEach(function (r) { if (r.type === 'open') D.open[r.token] = r.n; if (r.type === 'talk_live') D.talk[r.token] = r.n; if (/^booked_/.test(r.type) && r.type !== 'booked_opt_out') D.booked[r.token] = (D.booked[r.token] || 0) + r.n; }); counts(); if (tab === 'pi' || tab === 'dental') renderList(); if (D.bookings.length > before) hype('NEW BOOKING. Check Replies & bookings. Now. Please. Now.'); }).catch(function () {}); }, 60000);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+name = "witchcraft-business"
+pages_build_output_dir = "../witchcraft-business-deploy-20260926"
+compatibility_date = "2026-07-18"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "witchcraft-setter-leads"
+database_id = "6bc56adb-19bb-4d39-91ee-59156f932e7f"

@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Witchcraft Setter | The AI setter that answers every lead in 10 seconds</title>
+<meta name="description" content="AI appointment setter for high-ticket teams. Answers every inbound lead in 10 seconds, hands hot leads to your closer live, gets calls to show. Paid per showed call.">
+<link rel="canonical" href="https://witchcraft.business/setter/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Witchcraft Setter">
+<meta property="og:title" content="Witchcraft Setter | Every lead touched in 10 seconds">
+<meta property="og:description" content="The AI setter for high-ticket sales teams. Live hand-off to closers, no-show rescue, paid per showed call.">
+<meta property="og:url" content="https://witchcraft.business/setter/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#06060A">
+<link rel="alternate" type="text/plain" href="https://witchcraft.business/llms.txt" title="LLM-readable summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://witchcraft.business/#org","name":"Witchcraft AI","url":"https://witchcraft.business/","email":"hecate@witch.codes","address":{"@type":"PostalAddress","addressLocality":"Sydney","addressCountry":"AU"}},
+ {"@type":"SoftwareApplication","@id":"https://witchcraft.business/setter/#app","name":"Witchcraft Setter","applicationCategory":"BusinessApplication","applicationSubCategory":"AI appointment setter","operatingSystem":"Web","url":"https://witchcraft.business/setter/","publisher":{"@id":"https://witchcraft.business/#org"},"description":"AI appointment setter for high-ticket inbound sales teams. Replies to every inbound lead on the channel they used within 10 seconds (voice, SMS, WhatsApp, Instagram DM, Messenger, email), qualifies them, warm-transfers hot leads to a live closer mid-call, runs show-rate reminders and no-show rebooking, and is priced per showed call.","offers":{"@type":"Offer","price":"50","priceCurrency":"USD","description":"Pilot pricing: 50 USD per showed call, no setup fee, 30-day split-flow pilot. Pre-launch."}},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What is Witchcraft Setter?","acceptedAnswer":{"@type":"Answer","text":"An AI setter. Answers inbound leads in 10 seconds, qualifies, hands hot ones to your closer, books the rest."}},
+  {"@type":"Question","name":"How is it priced?","acceptedAnswer":{"@type":"Answer","text":"$50 per showed call. No setup fee, no seats."}},
+  {"@type":"Question","name":"Does it cold call?","acceptedAnswer":{"@type":"Answer","text":"No. Opted-in inbound leads only."}},
+  {"@type":"Question","name":"Is it live?","acceptedAnswer":{"@type":"Answer","text":"Pre-launch, taking pilots. Figures are targets."}}
+ ]}
+]}
+</script>
+<link rel="stylesheet" href="/setter/setter.css?v=4">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Witchcraft Setter home"><svg class="sigil" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="1"/><path d="M16 3v26M3 16h26" stroke="currentColor" stroke-width=".6" opacity=".5"/><circle cx="16" cy="16" r="3.2" fill="currentColor"/></svg>Witchcraft <em>Setter</em></a>
+    <ul>
+      <li><a href="#call">The call</a></li>
+      <li><a href="#why">Why 3×</a></li>
+      <li><a href="#roi">Your numbers</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#investors">Investors</a></li>
+    </ul>
+    <a class="btn rose sm" href="#pilot">Get a pilot</a>
+  </div>
+</nav>
+
+<main id="main">
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>AI setter · pilots open</p>
+      <h1 class="kinetic" aria-label="Every lead touched in ten seconds. Paid when the call shows.">
+        <span class="l1">Every lead</span>
+        <span class="l2">touched in <em>10&nbsp;seconds.</em></span>
+        <span class="l3">Paid when the call <em>shows.</em></span>
+      </h1>
+      <p class="lede">Leads go cold because nobody answers. Artemis answers in seconds, qualifies, puts hot leads through to your closer <b>live</b>, and gets booked calls to show.</p>
+      <div class="ctas">
+        <a class="btn rose" href="#call">Take the call →</a>
+        <a class="btn ghost" href="#pilot">Get a pilot</a>
+      </div>
+    </div>
+    <figure class="field" aria-label="Live simulation: leads going cold in a typical CRM versus leads answered within ten seconds">
+      <canvas id="field"></canvas>
+      <div class="lane lane-a"><span class="lbl">Your CRM, today</span><span class="stat"><b id="coldN">0</b> went cold</span></div>
+      <div class="lane lane-b"><span class="lbl">Witchcraft Setter</span><span class="stat"><b id="warmN">0</b> answered &lt;10s · <b id="bookN">0</b> booked</span></div>
+      <figcaption>Simulation, not client data.</figcaption>
+    </figure>
+  </div>
+</header>
+
+<section class="strip" aria-label="Key numbers">
+  <div class="wrap strip-grid">
+    <div><b>&lt;10 s</b><span>first touch, any hour</span></div>
+    <div><b>7</b><span>channels</span></div>
+    <div><b>Live</b><span>hand-off to your closer</span></div>
+    <div><b>$0</b><span>unless the booked call shows</span></div>
+  </div>
+</section>
+
+<section id="call" class="call-sec">
+  <div class="wrap">
+    <p class="eyebrow">You're the lead</p>
+    <h2>Pick up. <em>She's already calling.</em></h2>
+    <p class="lede">Live, not recorded. Allow the mic and play the lead: push on price, ask if she's a bot, say “stop”. Watch the CRM fill itself.</p>
+
+    <div class="call-grid">
+      <div class="phone" id="phone" data-state="idle">
+        <div class="phone-top">
+          <span class="rec"><span class="live-dot"></span><span id="callState">Ready</span></span>
+          <span class="mono" id="callClock">00:00</span>
+        </div>
+        <div class="stage" id="stage">
+          <div class="avatar-host" id="avatarHost" aria-hidden="true"></div>
+          <div class="portrait" id="portrait" aria-hidden="true">
+            <svg viewBox="0 0 200 200"><defs><radialGradient id="pg" cx="50%" cy="38%" r="60%"><stop offset="0" stop-color="#2a2f55"/><stop offset="1" stop-color="#07070b"/></radialGradient></defs><rect width="200" height="200" fill="url(#pg)"/><circle cx="100" cy="82" r="30" fill="#1a1d38"/><path d="M40 200c6-44 32-66 60-66s54 22 60 66" fill="#1a1d38"/></svg>
+            <canvas id="wave" class="wave"></canvas>
+          </div>
+          <div class="incoming" id="incoming" hidden>
+            <p class="mono small">Incoming call · Northstar Coaching</p>
+            <p class="who">Artemis <span>AI setter</span></p>
+            <p class="mono tiny" id="ftouch"></p>
+            <div class="answer-row">
+              <button class="round decline" id="declineBtn" aria-label="Decline">✕</button>
+              <button class="round answer" id="answerBtn" aria-label="Answer">✆</button>
+            </div>
+          </div>
+          <div class="load" id="loadMsg" hidden></div>
+          <p class="captions" id="captions" aria-live="polite"></p>
+        </div>
+        <div class="chips" id="chips"></div>
+        <form class="say" id="sayForm" autocomplete="off">
+          <input id="sayIn" placeholder="Reply as the lead…" aria-label="Your reply as the lead" disabled>
+          <button type="submit" disabled id="sayBtn">Say</button>
+        </form>
+        <div class="phone-foot">
+          <button class="btn rose sm" id="startBtn">Start the call</button>
+          <button class="btn sm ghost" id="muteBtn" type="button" hidden aria-pressed="false">Mute mic</button>
+          <label class="tog"><input type="checkbox" id="faceTog" checked> Live face (Spatius)</label>
+          <span class="tiny mono dim" id="modeNote">Voice: ElevenLabs v3</span>
+        </div>
+      </div>
+
+      <aside class="crm" aria-label="CRM record, filled in automatically">
+        <div class="crm-h"><span>CRM · auto-filled</span><span id="stageTag">idle</span></div>
+        <dl>
+          <dt>Source</dt><dd id="fSrc">·</dd>
+          <dt>Goal</dt><dd id="fGoal">·</dd>
+          <dt>Now</dt><dd id="fNow">·</dd>
+          <dt>Timeline</dt><dd id="fTime">·</dd>
+          <dt>Decision</dt><dd id="fDec">·</dd>
+          <dt>Objections</dt><dd id="fObj">·</dd>
+          <dt>Score</dt><dd><span id="fScore">0</span>/100<div class="meter"><i id="fBar"></i></div></dd>
+          <dt>Next</dt><dd id="fNext">·</dd>
+        </dl>
+        <div class="live-talk">
+          <p>Break character any time and ask her about pricing or the pilot.</p>
+        </div>
+      </aside>
+    </div>
+    <p class="note">No mic? Tap or type.</p>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <p class="eyebrow">Why 3×</p>
+    <h2>Most AI setters stop at <em>“booked.”</em><br>The money is after.</h2>
+    <div class="x-list">
+      <article><span class="x">6×</span><h3>First touch &lt;10 s</h3><p>On their channel: call, SMS, WhatsApp, DM or email.</p></article>
+      <article><span class="x">now</span><h3>Hot leads go live</h3><p>Transferred to your closer mid-call, with notes.</p></article>
+      <article><span class="x">↑ shows</span><h3>Show-rate engine</h3><p>Reminders, closer video, one-tap reschedule, no-show rebooking.</p></article>
+      <article><span class="x">12</span><h3>Touches, not one</h3><p>Seven days, legal hours only. “Stop” ends it.</p></article>
+      <article><span class="x">100%</span><h3>Every call scored</h3><p>AI scores all of them. Humans check the bottom 10%.</p></article>
+      <article><span class="x">auto</span><h3>Self-improving</h3><p>Lines A/B tested, winners kept. One number every Monday.</p></article>
+    </div>
+    <p class="note">Pilot targets, not results.</p>
+  </div>
+</section>
+
+<section class="metric">
+  <div class="wrap metric-grid">
+    <div>
+      <p class="eyebrow">One number</p>
+      <h2>Cost per <em>showed</em> call.</h2>
+    </div>
+    <div>
+      <p>The setter's whole job in one number. It's what we're paid on.</p>
+      <p class="mono tiny dim">Human setter: $3 to 8k a month for ~40 booked calls = $75 to 200 per <u>booked</u> call.</p>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="how">
+  <div class="wrap">
+    <p class="eyebrow">A lead's first ten minutes</p>
+    <h2>Form to closer, <em>no gap.</em></h2>
+    <ol class="timeline">
+      <li><span class="t">00:00</span><div><h3>Captured</h3><p>Form, DM or missed call. Consent logged first.</p></div></li>
+      <li><span class="t">00:07</span><div><h3>First touch</h3><p>Same channel. She says she's an AI.</p></div></li>
+      <li><span class="t">00:40</span><div><h3>Qualified</h3><p>Your closers' rules. The CRM fills itself.</p></div></li>
+      <li><span class="t">01:55</span><div><h3>Routed</h3><p>Hot leads go live to a closer. The rest get booked.</p></div></li>
+      <li><span class="t">T-24h</span><div><h3>Shows up</h3><p>Confirm, remind, rebook no-shows.</p></div></li>
+      <li><span class="t">Mon</span><div><h3>Learns</h3><p>Every call scored. Winning lines kept.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="roi" class="roi">
+  <div class="wrap">
+    <p class="eyebrow">Your numbers</p>
+    <h2>What a showed call <em>really costs.</em></h2>
+    <p class="lede">Uplift starts at 0%, so the saving shown is cost alone.</p>
+    <div class="roi-grid">
+      <div class="fields">
+        <label>Leads / month<input id="rLeads" type="number" min="0" value="400"></label>
+        <label>Book rate %<input id="rBook" type="number" min="0" max="100" value="15"></label>
+        <label>Show rate %<input id="rShow" type="number" min="0" max="100" value="60"></label>
+        <label>Close rate %<input id="rClose" type="number" min="0" max="100" value="20"></label>
+        <label>Deal value $<input id="rDeal" type="number" min="0" value="5000"></label>
+        <label>Human setters<input id="rSet" type="number" min="0" value="2"></label>
+        <label>Cost per setter / mo $<input id="rCost" type="number" min="0" value="4000"></label>
+        <label>Our price per showed call $<input id="rPrice" type="number" min="0" value="50"></label>
+        <label class="range">Extra bookings: <b id="rUpV">0%</b><input id="rUp" type="range" min="0" max="100" step="5" value="0"></label>
+      </div>
+      <div class="out" aria-live="polite">
+        <div class="row h"><span></span><span>Today</span><span>With Setter</span></div>
+        <div class="row"><span>Booked / mo</span><span id="oB1"></span><span id="oB2"></span></div>
+        <div class="row"><span>Showed / mo</span><span id="oS1"></span><span id="oS2"></span></div>
+        <div class="row"><span>Deals / mo</span><span id="oD1"></span><span id="oD2"></span></div>
+        <div class="row"><span>Revenue / mo</span><span id="oR1"></span><span id="oR2"></span></div>
+        <div class="row"><span>Setting cost / mo</span><span id="oC1"></span><span id="oC2"></span></div>
+        <div class="row"><span>Cost per showed call</span><span id="oP1"></span><span id="oP2"></span></div>
+        <div class="big" id="oNet"></div>
+        <p class="tiny mono dim">monthly gain</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pilot" class="pilot">
+  <div class="wrap pilot-grid">
+    <div>
+      <p class="eyebrow">Get a pilot</p>
+      <h2>Fill this in. <em>Watch the clock.</em></h2>
+      <p class="lede">Artemis calls you back on this page in seconds, like she would your leads. A human follows up today.</p>
+      <ul class="ticks">
+        <li>$0 setup · $50 per showed call · 30-day split test</li>
+        <li>50+ opted-in leads a month</li>
+        <li>Your data stays yours</li>
+      </ul>
+    </div>
+    <form class="lead-form" id="leadForm" novalidate>
+      <div class="two">
+        <label>Name<input name="name" required autocomplete="name"></label>
+        <label>Business<input name="business" autocomplete="organization"></label>
+      </div>
+      <div class="two">
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label>Mobile<input name="phone" type="tel" autocomplete="tel" placeholder="optional"></label>
+      </div>
+      <div class="two">
+        <label>Leads / month<select name="monthly_leads"><option>50 to 150</option><option>150 to 500</option><option>500 to 2,000</option><option>2,000+</option><option>Under 50</option></select></label>
+        <label>Deal size<select name="offer_price"><option>$1k to $3k</option><option>$3k to $10k</option><option>$10k to $50k</option><option>$50k+</option><option>Under $1k</option></select></label>
+      </div>
+      <label class="hp" aria-hidden="true">Leave empty<input name="hp" tabindex="-1" autocomplete="off"></label>
+      <label class="consent"><input type="checkbox" name="consent" required> <span id="consentText">I agree that Witchcraft Setter may contact me about a pilot by email, phone call and SMS, including by AI and automated means. Consent is not a condition of purchase. I can opt out any time by replying STOP.</span></label>
+      <button class="btn rose" type="submit" id="leadBtn">Send and start the clock</button>
+      <p class="form-msg" id="formMsg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section id="compliance" class="comp">
+  <div class="wrap">
+    <p class="eyebrow">Compliance</p>
+    <h2>Inbound only. <em>Never cold.</em></h2>
+    <div class="cols3">
+      <div><h3>Consent ledger</h3><p>Wording, time, source, IP. No record, no call.</p></div>
+      <div><h3>Disclosed AI</h3><p>Says so first. Human on request. “Stop” always works.</p></div>
+      <div><h3>Scrubs &amp; hours</h3><p>US and AU do-not-call lists. Local quiet hours.</p></div>
+      <div><h3>Official APIs</h3><p>Meta Graph API only. No scrapers, no bots.</p></div>
+      <div><h3>Your data</h3><p>Never pooled across clients.</p></div>
+      <div><h3>Audit trail</h3><p>Every touch and transcript exportable.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="wrap">
+    <p class="eyebrow">Pricing</p>
+    <h2>Pay for <em>shows,</em> not seats.</h2>
+    <div class="cols3 price-cols">
+      <div><p class="mono tiny dim">Pilot · 30 days</p><p class="price">$0 <small>setup</small></p><p>Split test against your setters. <b>$50 per showed call</b> on our half.</p></div>
+      <div><p class="mono tiny dim">Scale</p><p class="price">$50 <small>/ showed call</small></p><p>All channels, live transfer, no-show rescue. Volume pricing above 300 a month.</p></div>
+      <div><p class="mono tiny dim">Closer teams &amp; agencies</p><p class="price">White-label</p><p>Your brand, your client roster.</p></div>
+    </div>
+    <p class="note">USD. Pre-launch pricing.</p>
+  </div>
+</section>
+
+<section id="investors" class="inv">
+  <div class="wrap">
+    <p class="eyebrow">For investors</p>
+    <h2>Outcome-priced setting, <em>measured in public.</em></h2>
+    <p class="lede">Teams pay $3 to 8k a month per human setter. We charge per <em>showed</em> call and publish the proof.</p>
+    <div class="kpis">
+      <div><b>57 to 84%</b><span>cheaper than 5 human setters at 200 booked calls a month</span></div>
+      <div><b>$78k</b><span>ARR per team; 20 teams ≈ $1.56M</span></div>
+      <div><b>90 days</b><span>the retention window we'll be judged on</span></div>
+    </div>
+    <p class="note">Why now: human-grade 10-second replies just got cheap, and buyers distrust AI sales tools (FTC v Air AI, Mar 2026). Proof wins.</p>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="wrap">
+    <p class="eyebrow">Questions</p>
+    <h2>Asked, <em>answered.</em></h2>
+    <details><summary>What is it?</summary><p>An AI setter. Answers inbound leads in 10 seconds, qualifies, hands hot ones to your closer, books the rest.</p></details>
+    <details><summary>Pricing?</summary><p>$50 per showed call. No setup fee, no seats.</p></details>
+    <details><summary>Does it cold call?</summary><p>No. Opted-in inbound leads only.</p></details>
+    <details><summary>Is it live?</summary><p>Pre-launch, taking pilots. Figures are targets.</p></details>
+  </div>
+</section>
+
+<section class="src">
+  <div class="wrap">
+    <p class="eyebrow">Sources</p>
+    <ol>
+      <li>Oldroyd / InsideSales 2007 and HBR 2011, via <a href="https://www.expertise.ai/stats/speed-to-lead-statistics">Expertise AI</a>.</li>
+      <li>Setter costs: <a href="https://www.roasform.com/reviews/closers-io-review">ROAS Form</a>.</li>
+      <li>AI voice and the TCPA: <a href="https://docs.fcc.gov/public/attachments/FCC-24-17A1.pdf">FCC 24-17</a>.</li>
+      <li>Air AI: <a href="https://www.ftc.gov/news-events/news/press-releases/2026/03/air-ai-its-owners-will-be-banned-marketing-business-opportunities-settle-ftc-charges-company-misled">FTC, 24 Mar 2026</a>.</li>
+    </ol>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div><b class="brand-f">Witchcraft <em>Setter</em></b><br>A <a href="https://witchcraft.business/">witchcraft.business</a> product · Sydney, Australia · <a href="mailto:hecate@witch.codes">hecate@witch.codes</a></div>
+    <div class="mono tiny dim">v3 · 26 Sep 2026 · <a href="/llms.txt">llms.txt</a></div>
+  </div>
+</footer>
+
+<script src="/setter/app.js?v=8" defer></script>
+</body>
+</html>

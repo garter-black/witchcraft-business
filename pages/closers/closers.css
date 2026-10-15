@@ -1,0 +1,16 @@
+/* Witchcraft Closers v1: layered on /setter/setter.css (same house register: Bodoni Moda / EB Garamond / Archivo, void + rose). */
+.hero-grid{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}
+.hero-note{margin-top:14px}
+.call-wrap{perspective:1600px}
+.call-wrap .phone{transform:rotateY(-6deg) rotateX(2deg);transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.8,.2,1),box-shadow .6s;box-shadow:30px 60px 140px -50px rgba(25,25,112,.95),-12px 0 60px -30px rgba(183,110,121,.45)}
+.call-wrap .phone:hover,.call-wrap .phone[data-state="live"],.call-wrap .phone[data-state="connecting"]{transform:none}
+@media(max-width:980px){.call-wrap .phone{transform:none}}
+.incoming .btn{margin-top:16px}
+.intro-tip{color:var(--bone2);max-width:30ch;margin:4px auto 0}
+.spin3d{animation:spin3d 9s linear infinite;transform-style:preserve-3d}
+@keyframes spin3d{to{transform:rotateY(360deg)}}
+.price-cols .price{font-size:44px}
+.phone[data-state="live"] .phone-top{color:var(--rose-l)}
+.chip.stop{border-color:rgba(237,230,218,.2);color:var(--dim)}
+#forWho b{color:var(--bone);font-weight:600}
+@media (prefers-reduced-motion:reduce){.spin3d{animation:none}}

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>BoringSales Teardown | Witchcraft Setter</title>
+<meta name="description" content="Internal teardown of boringsales.ai, captured 26 Sep 2026, and how Witchcraft Setter beats it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=EB+Garamond:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E0D0B;--paper:#F2EFE8;--paper2:#E8E3D8;--body:#4A453D;--mute:#6B655C;--rule:#C9C3B8;--accent:#B8432F;--ok:#3F7D5A;
+--d:'Bodoni Moda',Georgia,serif;--n:'EB Garamond',Garamond,Georgia,serif;--m:'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;--pad:clamp(16px,5vw,80px)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--n);font-size:18px;line-height:1.55;overflow-x:hidden}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 var(--pad)}
+header{background:var(--ink);color:var(--paper);padding:56px 0 48px}
+header a{color:#E0654C}
+.eyebrow{font-family:var(--m);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+header .eyebrow{color:#9C958A}
+h1{font-family:var(--d);font-weight:600;font-size:clamp(38px,6vw,72px);line-height:1.02;margin:.3em 0 .3em}
+h1 em,h2 em{font-style:italic;color:var(--accent)}
+header h1 em{color:#E0654C}
+h2{font-family:var(--d);font-weight:600;font-size:clamp(28px,3.6vw,42px);line-height:1.1;margin:0 0 .5em}
+h3{font-size:20px;margin:1.2em 0 .3em}
+section{padding:52px 0;border-top:1px solid var(--rule)}
+p{margin:.6em 0;color:var(--body);max-width:75ch}
+ul,ol{margin:.6em 0 .6em 22px;color:var(--body)}
+li{margin:.35em 0}
+blockquote{border-left:3px solid var(--accent);padding:6px 16px;margin:14px 0;font-family:var(--d);font-style:italic;font-size:20px;color:var(--ink);max-width:70ch}
+.bluf{background:var(--paper2);border:1px solid var(--rule);padding:22px 24px;margin-top:26px}
+.bluf li{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:16px}
+th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--m);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:500}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tw table{min-width:640px}
+.tag{font-family:var(--m);font-size:11px;letter-spacing:.08em;padding:2px 7px;border:1px solid var(--rule);white-space:nowrap}
+.tag.hi{border-color:var(--ok);color:var(--ok)}
+.tag.lo{border-color:var(--accent);color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:800px){.grid2{grid-template-columns:1fr}}
+.card{border:1px solid var(--rule);padding:18px 20px;background:#fff}
+.card h3{margin-top:0}
+code{font-family:var(--m);font-size:14px;background:var(--paper2);padding:1px 5px}
+footer{background:var(--ink);color:#A79F93;padding:36px 0;font-size:14px}
+footer a{color:var(--paper)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Internal · not indexed · captured 26 Sep 2026 AEST</div>
+    <h1>BoringSales, <em>taken apart.</em></h1>
+    <p style="color:#CFC9BD">A teardown of <a href="https://boringsales.ai/">boringsales.ai</a> from its public pages (home, guarantee, services, terms, privacy, data deletion, sitemap, robots, page source), and exactly where <a href="/setter/">Witchcraft Setter</a> beats it.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Bottom line</h2>
+    <div class="bluf"><ol>
+      <li><b>What it is:</b> a three-month-old, done-for-you <b>AI voice setter for inbound leads</b>. It calls within 60 seconds, qualifies, books, and follows up by SMS. It is sold to US home-service SMBs, and the same team also runs their Meta ads.</li>
+      <li><b>Strongest asset:</b> positioning. "You don't have a lead problem, you have a speed-to-revenue problem" is sharp, true, and backed by an inbound-only, consent-first legal setup.</li>
+      <li><b>Biggest gap:</b> it stops at "booked". There is no live hand-off to a closer, no show-rate engine, one channel plus SMS, and a human listens to every call, which caps how far it can scale.</li>
+      <li><b>Proof gap:</b> there are zero product results on the site. The "12–15 deals per 100 leads" figure is labelled a <i>goal</i>, and every testimonial is about the founder's consulting, not the product.</li>
+      <li><b>How we win:</b> first touch in 10 seconds on 7 channels, live transfer of hot leads, no-show rescue, AI scoring of 100% of calls, <b>pay per showed call</b>, and a public scoreboard. High-ticket teams first.</li>
+    </ol></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Company &amp; timing</h2>
+    <div class="tw"><table>
+      <tr><th>Item</th><th>Finding</th><th>Source</th></tr>
+      <tr><td>Legal entity</td><td>National Acquisition Holdings, LLC, doing business as BoringSales</td><td>footer, terms, privacy</td></tr>
+      <tr><td>Likely base</td><td>Texas. Arbitration is seated in Travis County, TX (Austin)</td><td>terms §16</td></tr>
+      <tr><td>Face of the brand</td><td>"Malik", a closer and Meta-ads growth consultant. Every testimonial names him</td><td>home, testimonials</td></tr>
+      <tr><td>Age</td><td>Terms and guarantee dated 23 Jun 2026, privacy 18 Aug 2026. About 3 months live</td><td>legal pages</td></tr>
+      <tr><td>Stage</td><td>"Now onboarding early-access customers · Apply for a pilot"</td><td>home banner</td></tr>
+      <tr><td>Contact</td><td>hello@boringsales.ai · X @boringsales · LinkedIn linked</td><td>schema.org, footer</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Offer &amp; positioning</h2>
+    <blockquote>"We install a proven appointment setter in your business in under an hour. It calls every lead, instantly qualifies them, and books the appointment ready for you to close. If it doesn't perform, you don't pay."</blockquote>
+    <ul>
+      <li><b>Category they claim:</b> "The only team that specializes in speed to revenue". Their single metric is the <i>lead-to-deal ratio</i>.</li>
+      <li><b>Enemy framing:</b> email and SMS autoresponders ("avoidance dressed up as action"), blaming the lead source, the "magic-button AI fantasy" (a swipe at 11x-style AI SDRs), and the bloated $85K tech stack.</li>
+      <li><b>Differentiator claimed:</b> "Built by closers, not coders". Closers write the scripts and rebuttals; "an expert seller … listens to every call, scores it, and coaches the AI".</li>
+      <li><b>Who it is for:</b> "home-service or SMB business (HVAC, roofing, plumbing)". The services page adds coaches and local service providers.</li>
+      <li><b>Integrations:</b> Salesforce, HubSpot, GoHighLevel, Calendly, Google Calendar, Zapier.</li>
+      <li><b>Channels:</b> phone call with a "natural AI voice", then "follows up by text". No DMs, WhatsApp, email or video.</li>
+      <li><b>Second product:</b> they <b>run the client's Meta ads</b> inside the client's own ad account and read the results back. Ads plus setter are sold as one system.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Pricing &amp; the guarantee, read closely</h2>
+    <p><b>Pricing is not published.</b> The terms describe it as a <i>one-time setup fee + recurring subscription (monthly or annual) + usage-based charges (e.g. call volume or minutes)</i>, with trials "from time to time".</p>
+    <p><b>The guarantee is conditional, and it pays out on activity, not outcomes.</b> "Perform" means the setter "calls your inbound leads fast, qualifies them, and books appointments". To qualify you need:</p>
+    <ul>
+      <li>at least <b>50 fresh, opted-in inbound leads a month</b>, each no more than 6 months old, with consent to call;</li>
+      <li>a connected calendar with reasonable availability, and no pausing, throttling or diverting of lead flow;</li>
+      <li>to attend the appointments it books, complete onboarding, and route <i>all</i> eligible leads to them rather than competing channels.</li>
+    </ul>
+    <p>The remedy is to "keep working at no additional cost", and only then refund <b>subscription fees</b> for the period. It excludes low volume, offer or price changes, and "unworked appointments". Liability is capped at the <b>greater of 3 months' fees or US$100</b>. Their weak spot: <b>a setter that books no-shows still "performed".</b></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Funnel &amp; site mechanics</h2>
+    <div class="tw"><table>
+      <tr><th>Layer</th><th>What they run</th><th>What it tells us</th></tr>
+      <tr><td>Site</td><td>Astro 5.18 static site on Cloudflare. Light/dark theme. Fonts Inter + Playfair + IBM Plex Mono</td><td>Cheap, fast, built by a small team (likely AI-assisted)</td></tr>
+      <tr><td>Tracking</td><td>Meta Pixel + <b>server-side Conversions API</b> at <code>/api/capi</code>, de-duplicated on a shared event_id</td><td>They buy traffic on Meta, and they know what they're doing</td></tr>
+      <tr><td>Attribution</td><td>Captures fbclid, gclid and utm_* into sessionStorage, appends them to app links, and beacons to <code>app.boringsales.ai/t</code></td><td>They run their own CRM ("Admin cockpit | Client portal") at app.boringsales.ai</td></tr>
+      <tr><td>Conversion</td><td>"Book a demo" fires InitiateCheckout and opens a modal. Applicants land on <code>/demo-applied</code>: "You're in. Now pick your time."</td><td>Application-gated demo, classic high-ticket funnel</td></tr>
+      <tr><td>Live demo</td><td>"Enter your number and our AI setter calls you". The field is <b>+1 only</b></td><td>US and Canada only today</td></tr>
+      <tr><td>Proof media</td><td>6 recorded demo calls (20–43s) on Bunny Stream: "Holding the price line", "I already have a front desk", "The $24K math", realty discovery. Plus 2 Loom videos</td><td>Good objection coverage, but they are demo calls, not client results</td></tr>
+      <tr><td>AEO</td><td>robots.txt explicitly welcomes GPTBot, ClaudeBot, PerplexityBot and Google-Extended</td><td>They want to be the answer AI assistants give. We should do the same</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Proof audit</h2>
+    <ul>
+      <li><b>Outcome claim:</b> "Most businesses 3 to 5 deals per 100 leads · The goal with us 12 to 15". Explicitly a <b>goal</b>, not a result.</li>
+      <li><b>Testimonials:</b> six, all about "working with Malik" (strategy, ads, clarity). The page itself says they are from "business owners who have worked directly with the closers now building BoringSales". <b>None describe the product.</b></li>
+      <li><b>Named clients, logos, case studies:</b> none. After the 11x fake-logo episode, that is honest, but it is also empty.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Legal posture</h2>
+    <p>This part is well drafted, and we should match it. The client warrants TCPA, state "mini-TCPA" and two-party recording consent, and promises to honour do-not-call lists, opt-outs and calling-time limits. The terms also include an "Individual Results Vary" section, a warranty disclaimer, indemnification by the client, and binding arbitration with a class-action waiver. Their data-deletion page exists for Meta app review, because they hold Facebook Page and ad-account tokens.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Strengths vs gaps</h2>
+    <div class="grid2">
+      <div class="card"><h3>What they do well</h3><ul>
+        <li>Crisp "speed-to-revenue" message, one metric</li>
+        <li>Inbound-only, consent-first, legally clean</li>
+        <li>Closer-written scripts plus human QC: good early quality</li>
+        <li>Ads plus setter as one system, so they control both halves</li>
+        <li>Solid tracking (Pixel + CAPI) and their own CRM</li>
+        <li>Answer-engine-ready site</li>
+      </ul></div>
+      <div class="card"><h3>Where they are exposed</h3><ul>
+        <li>Voice and SMS only. No DM, WhatsApp, email or video</li>
+        <li>No live transfer: every hot lead waits for a booked slot</li>
+        <li>Nothing on show rate or no-shows</li>
+        <li>A human listens to every call, so QC cost grows with volume</li>
+        <li>Guarantee is on activity; pricing hidden</li>
+        <li>No product results. Brand rests on one founder</li>
+        <li>US-only demo. Low-ticket home services first</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Where our <em>3x</em> comes from</h2>
+    <p>Better sales, better sound, better inference, video calls through Spatius, or self-scheduling? All five, but they are not equal. Ranked by impact on revenue:</p>
+    <div class="tw"><table>
+      <tr><th>#</th><th>Lever</th><th>BoringSales</th><th>Witchcraft Setter</th><th>Metric we publish</th><th>Confidence</th></tr>
+      <tr><td>1</td><td><b>Better sales:</b> live hand-off</td><td>Books for later</td><td>Warm-transfers leads scoring 80+ to an available closer mid-call, with a whisper summary</td><td>% of hot leads closed same day</td><td><span class="tag hi">high</span></td></tr>
+      <tr><td>2</td><td><b>Self-scheduling:</b> show-rate engine</td><td>Books the calendar</td><td>Confirm, remind, closer video, one-tap reschedule, automatic no-show rebooking</td><td>Show rate; cost per showed call</td><td><span class="tag hi">high</span></td></tr>
+      <tr><td>3</td><td><b>Channels</b></td><td>Call + SMS</td><td>Reply on the channel the lead used (IG DM, WhatsApp, Messenger, SMS, email, voice) in &lt;10s</td><td>Contact rate within 5 min</td><td><span class="tag hi">high</span></td></tr>
+      <tr><td>4</td><td><b>Better inference</b></td><td>Undisclosed model; human QC</td><td>Fast model for real-time turn-taking, strong model for post-call scoring, memory shared across channels, automatic A/B of openers and rebuttals</td><td>Booked rate by script version</td><td><span class="tag hi">med-high</span></td></tr>
+      <tr><td>5</td><td><b>Better sound</b></td><td>"Natural AI voice"</td><td>Premium low-latency voice, sub-second turn-taking, optional consented clone of the team's best closer, multilingual</td><td>Median response latency; hang-up rate in first 15s</td><td><span class="tag">medium</span></td></tr>
+      <tr><td>6</td><td><b>Video via Spatius</b></td><td>None</td><td>Avatar video intro before the call, and an optional avatar video "reception" for leads who click through. Spatius names reception avatars as one of its best-performing products</td><td>Show rate, avatar vs no avatar (A/B)</td><td><span class="tag lo">unproven: pilot</span></td></tr>
+      <tr><td>7</td><td><b>Commercial model</b></td><td>Setup + subscription + minutes; activity guarantee</td><td>$0 setup, <b>pay per showed call</b>, split-flow pilot</td><td>Public scoreboard</td><td><span class="tag hi">high</span></td></tr>
+    </table></div>
+    <p><b>The likeliest misreading, and why it's wrong:</b> "3x better" does <i>not</i> mean calling faster than 60 seconds. Below one minute, speed has diminishing returns. The 3x lives in what happens <i>after</i> first contact: transfer, show rate and persistence.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Threats &amp; next moves</h2>
+    <ul>
+      <li><b>They can copy features in weeks.</b> Our durable edges are distribution (a network of working high-ticket closers), outcome pricing they can't match without trusting their own numbers, and public proof.</li>
+      <li><b>Name:</b> boringsales.ai, .com and .co are all taken (the .ai is them). We are running as <b>Witchcraft Setter</b> on witchcraft.business/setter until a brand is chosen.</li>
+      <li><b>Build order:</b> (1) voice + SMS speed-to-lead with live transfer on one pilot, (2) show-rate engine, (3) IG/WhatsApp DMs via the official API, (4) Spatius avatar A/B.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="beat">
+  <div class="wrap">
+    <h2>Beating their five strengths, <em>researched</em></h2>
+    <p>The five things BoringSales does well, the best documented practice for each, and what is already live on witchcraft.business/setter (26 Sep 2026). Confidence tags: <span class="tag hi">high</span> = primary source or verified live; <span class="tag">medium</span> = practitioner consensus; <span class="tag lo">low</span> = directional only.</p>
+    <div class="tw"><table>
+      <tr><th>Their strength</th><th>Best documented practice</th><th>What we shipped</th><th>Still to do</th></tr>
+      <tr><td><b>1. Crisp “speed-to-revenue” message, one metric</b></td>
+        <td>Use only traceable numbers: 100× contact and 21× qualification odds at 5 vs 30 min (Oldroyd/InsideSales 2007, 15,000+ leads); 42-hour average response (HBR 2011, 2,241 firms); 8× conversion within 5 min (XANT 2021, 5.7M leads). “78% buy from the first responder” has no traceable source. <span class="tag hi">high</span></td>
+        <td>Hero headline <i>“Every lead touched in 10 seconds. Paid when the call shows.”</i> The single metric is <b>cost per showed call</b>, which is the number we're paid on. A live hero simulation draws the decay curve and cites its sources on the page.</td>
+        <td>Swap the simulation for real pilot numbers once we have them.</td></tr>
+      <tr><td><b>2. Inbound-only, consent-first</b></td>
+        <td>US: AI voice counts as “artificial voice” (FCC 24-17). The one-to-one consent rule was vacated (11th Cir., <i>IMC v FCC</i>, 24 Jan 2025). Opt-out in any reasonable wording applies from Apr 2025. AU: Telemarketing Standard 2017 hours are weekdays 9am–8pm and Saturday 9am–5pm, with no Sundays or public holidays; caller ID must be shown and the call must end on request. <span class="tag hi">high</span></td>
+        <td>The form stores the <b>exact consent wording</b> checked server-side against a canonical version, plus timestamp, IP, country and user agent, in our own database (Cloudflare D1). AI disclosure in the first line. “Stop” works on the demo.</td>
+        <td>A DNC scrub and a quiet-hours engine per lead timezone, before any real outbound call.</td></tr>
+      <tr><td><b>3. Closer-written scripts + human QC</b></td>
+        <td>Have humans calibrate the rubric, let AI score every call, and route disagreements and the bottom slice to human review. Human-listens-to-everything costs rise linearly with call volume. <span class="tag">medium</span></td>
+        <td>A scripted playbook in closer language with objection branches (price, send info, busy, already have someone, bot, stop), live CRM scoring, and hot/warm/nurture routing.</td>
+        <td>Thiago writes the rubric. Next come an LLM judge calibrated on 50 human-scored calls and weekly A/B on openers.</td></tr>
+      <tr><td><b>4. Ads + setter as one system</b></td>
+        <td>Send CRM stages back to Meta with the Conversions API: Lead → Schedule → Purchase (with value). Optimise on the middle event, because Purchase is too sparse. Aim for event match quality of 7 or more, deduplicate on event_id, and don't reset the learning phase for about 6 weeks. <span class="tag">medium</span></td>
+        <td>Every lead gets an <code>event_id</code>, and the browser Pixel call is wired to dedupe against a future server event. A funnel <code>events</code> table (lead_created, first_touch, demo_booked) is ready to map to Schedule and Showed.</td>
+        <td><b>Needs Rio:</b> the Meta Pixel ID and a CAPI token. Then add a Showed custom event (a better signal than Schedule, and one BoringSales doesn't advertise).</td></tr>
+      <tr><td><b>5. Tracking + their own CRM</b></td>
+        <td>Capture first-touch attribution (UTM, fbclid, gclid, referrer, landing page) server-side on the lead record. <span class="tag hi">high</span></td>
+        <td>Captured on every submission and stored in D1 alongside the lead, which is the start of our own CRM. Rate limit, honeypot and validation are all live.</td>
+        <td>An owner-only lead view behind Cloudflare Access, plus Cloudflare Web Analytics (no cookies).</td></tr>
+      <tr><td><b>6. Answer-engine-ready site</b></td>
+        <td>Robots allow-lists do nothing if the CDN blocks AI crawlers at the edge (Cloudflare defaults did). Server-rendered content, structured data, named sources and statistics, fresh pages, and third-party mentions all help. llms.txt is cheap but has thin evidence of use. <span class="tag">medium</span></td>
+        <td><b>Edge AI-bot blocking and Cloudflare's managed robots.txt switched off on all 32 zones</b>. GPTBot and ClaudeBot went from 403 to 200. Added robots.txt, sitemap.xml, llms.txt, and JSON-LD (Organization, SoftwareApplication with offer, FAQPage) on the setter page.</td>
+        <td>Submit the sitemap to Bing Webmaster Tools and IndexNow (ChatGPT search leans on Bing). Get listed on G2 or Capterra and in Reddit threads.</td></tr>
+    </table></div>
+    <p><b>Where we already exceed them:</b> a live, talking, lip-synced face (Spatius) with ElevenLabs v3 voice, where they have 20-to-40-second recorded clips. A real form that calls you back on the page in about a second, where they have a US-only (+1) call-me form. Outcome pricing, where they hide theirs. Named sources on every statistic, where their “first responder wins” line is unsourced.</p>
+  </div>
+</section>
+
+<section id="matrix">
+  <div class="wrap">
+    <h2>Competitor matrix <em>(19 products)</em></h2>
+    <p>Figures come from each vendor's own homepage or pricing page, fetched 26 Sep 2026. Prices marked <span class="tag hi">✓ checked</span> were re-fetched and confirmed independently. "yes" under live transfer or no-show means the vendor's own site says so; "—" means we found no claim, not that the feature is missing.</p>
+    <div class="tw"><table>
+      <tr><th>Product</th><th>Type</th><th>Channels</th><th>Focus</th><th>Published price (USD)</th><th>Live transfer</th><th>No-show</th><th>Note</th></tr>
+      <tr><td><a href="https://setor.ai/">Setor AI</a></td><td>DM setter</td><td>IG DM, voice notes</td><td>Inbound</td><td>$299 / $499 / $1,000 per mo (1k–10k AI replies) <span class="tag hi" title="Price re-checked on vendor page by us, 26 Sep 2026">✓ checked</span></td><td>yes</td><td>—</td><td>High-ticket IG coaches; Meta Verified Partner</td></tr>
+<tr><td><a href="https://setsmart.io/pricing">SetSmart</a></td><td>DM setter</td><td>IG DM, WhatsApp, Messenger</td><td>Inbound</td><td>$25–$797 per mo (250–15k msgs) <span class="tag hi" title="Price re-checked on vendor page by us, 26 Sep 2026">✓ checked</span></td><td>yes</td><td>—</td><td>Claims +34% qualified calls</td></tr>
+<tr><td><a href="https://www.clinchd.io/">Clinchd</a></td><td>DM setter</td><td>IG DM only</td><td>Inbound</td><td>$97 / $197 per mo <span class="tag hi" title="Price re-checked on vendor page by us, 26 Sep 2026">✓ checked</span></td><td>yes (1-click takeover)</td><td>—</td><td>14-day money-back; coaches with $1k+ offers</td></tr>
+<tr><td><a href="https://www.appointwise.io/pricing">Appointwise</a></td><td>DM/SMS setter (GHL)</td><td>SMS, WhatsApp, IG, Messenger</td><td>Inbound</td><td>$197 / $397 per mo (homepage shows different figures)</td><td>—</td><td>—</td><td>Claims 30–40% of leads booked</td></tr>
+<tr><td><a href="https://closebot.com/plans/">CloseBot</a></td><td>CRM setter (GHL/HubSpot)</td><td>SMS + CRM channels</td><td>Inbound</td><td>Free; $64 per mo; agency $0.012/msg <span class="tag hi" title="Price re-checked on vendor page by us, 26 Sep 2026">✓ checked</span></td><td>yes</td><td>—</td><td>Cheap, white-label, agency channel</td></tr>
+<tr><td><a href="https://www.trysetter.com/pricing">Setter AI</a></td><td>Lead-form setter</td><td>WhatsApp, SMS, web chat</td><td>Both</td><td>$497–$3,497 per mo (500–5k credits); yearly $397–$2,997/mo <span class="tag hi" title="Price re-checked on vendor page by us, 26 Sep 2026">✓ checked</span></td><td>—</td><td>yes</td><td>Real estate, legal, solar. setter.ai domain is for sale</td></tr>
+<tr><td><a href="https://www.gohighlevel.com/">GoHighLevel AI Employee</a></td><td>CRM add-on</td><td>Voice, SMS, WhatsApp, IG, Messenger, chat, email</td><td>Both</td><td>$50 or $97 per mo add-on + base CRM</td><td>—</td><td>—</td><td>Claims 179M appointments booked (platform-wide)</td></tr>
+<tr><td><a href="https://www.regal.ai/">Regal.ai</a></td><td>Voice/SMS platform</td><td>Voice, SMS, chat</td><td>Both</td><td>Not published (sales-led)</td><td>yes</td><td>yes</td><td>Enterprise contact centres; closest feature match</td></tr>
+<tr><td><a href="https://synthflow.ai/pricing">Synthflow</a></td><td>Voice platform</td><td>Voice, chat, SMS, WhatsApp</td><td>Both</td><td>From $30,000 per yr (enterprise only)</td><td>yes</td><td>yes</td><td>Case study: −30% no-shows</td></tr>
+<tr><td><a href="https://smith.ai/pricing/ai-receptionist">Smith.ai</a></td><td>AI + human receptionist</td><td>Voice, SMS</td><td>Inbound</td><td>$0–$500+ per mo; ~$1.67–$2.50 per call; +$3 human escalation</td><td>yes</td><td>—</td><td>Per-call pricing (closest to outcome pricing); law firms</td></tr>
+<tr><td><a href="https://www.structurely.com/pricing">Structurely</a></td><td>Voice/SMS/email AI</td><td>Voice, SMS, email</td><td>Both</td><td>Platform fee (unpublished) + voice from $0.07/min</td><td>yes</td><td>—</td><td>Real estate &amp; mortgage</td></tr>
+<tr><td><a href="https://www.bland.ai/pricing">Bland AI</a></td><td>Voice API</td><td>Voice, SMS, chat</td><td>Both</td><td>$0.14/min (+$0.05 transfer); $299/mo tier at $0.12/min <span class="tag hi" title="Price re-checked on vendor page by us, 26 Sep 2026">✓ checked</span></td><td>yes</td><td>—</td><td>Build-your-own; regulated enterprises</td></tr>
+<tr><td><a href="https://www.retellai.com/pricing">Retell AI</a></td><td>Voice API</td><td>Voice, chat, SMS</td><td>Both</td><td>$0.07–$0.31/min pay-as-you-go</td><td>yes</td><td>—</td><td>Build-your-own; likely our voice layer candidate</td></tr>
+<tr><td><a href="https://vapi.ai/pricing">Vapi</a></td><td>Voice API</td><td>Phone</td><td>Both</td><td>$0.05/min hosting + provider costs; $29 / $999+ per mo</td><td>—</td><td>—</td><td>Developer platform</td></tr>
+<tr><td><a href="https://www.11x.ai/products/alice/pricing">11x (Alice)</a></td><td>AI SDR (outbound)</td><td>Email, calls</td><td>Outbound</td><td>$3,750 per mo, billed annually <span class="tag hi" title="Price re-checked on vendor page by us, 26 Sep 2026">✓ checked</span></td><td>—</td><td>—</td><td>Reported fake logos / 70–80% early churn (TechCrunch)</td></tr>
+<tr><td><a href="https://www.artisan.co/pricing">Artisan (Ava)</a></td><td>AI SDR (outbound)</td><td>Email, social, voice</td><td>Outbound</td><td>Not published</td><td>yes</td><td>—</td><td>Outbound, not setter</td></tr>
+<tr><td><a href="https://aisdr.com/pricing/">AiSDR</a></td><td>AI SDR (outbound)</td><td>Email, LinkedIn, phone</td><td>Outbound</td><td>$250 / $900 / $2,500 per mo</td><td>—</td><td>—</td><td>Outbound, not setter</td></tr>
+<tr><td><a href="https://www.qualified.com/pricing">Qualified (Piper)</a></td><td>AI SDR (inbound web)</td><td>Web chat/voice, email</td><td>Inbound</td><td>Not published</td><td>—</td><td>—</td><td>B2B website visitors</td></tr>
+<tr><td><a href="https://www.ftc.gov/news-events/news/press-releases/2026/03/air-ai-its-owners-will-be-banned-marketing-business-opportunities-settle-ftc-charges-company-misled">Air AI</a></td><td>Defunct voice agent</td><td>—</td><td>—</td><td>n/a</td><td>—</td><td>—</td><td>FTC: $18M judgment (largely suspended), $50k paid, 24 Mar 2026 <span class="tag hi">✓ checked</span>; domain now unrelated company</td></tr>
+    </table></div>
+    <h3>What the matrix says</h3>
+    <ul>
+      <li><b>The white space is real.</b> No one found combines all three of live transfer to a closer, explicit no-show handling, and billing per <i>showed</i> call. Regal.ai and Synthflow do the first two, but only for enterprise, on custom quotes.</li>
+      <li><b>DM setters are cheap and crowded</b> ($25–$1,000 a month): Setor, SetSmart, Clinchd, Appointwise. They offer human takeover but no voice and nothing on shows. Our price has to be justified by <i>showed calls</i>, not by message volume.</li>
+      <li><b>Nobody prices on outcome.</b> The closest are per-call (Smith.ai, about $1.67–$2.50) and per-message (CloseBot, $0.012). Pay per showed call is ours to own.</li>
+      <li><b>Build, don't compete, with voice APIs.</b> Bland, Retell and Vapi ($0.05–$0.31 a minute) are the voice layer to build on, not rivals.</li>
+      <li><b>Closest threats:</b> CloseBot (cheap, already sells into agencies and coaching through GoHighLevel), SetSmart (same high-ticket coach positioning), and Regal.ai if it launches self-serve.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Sources (fetched 26 Sep 2026)</h2>
+    <ul>
+      <li><a href="https://boringsales.ai/">boringsales.ai</a> (home, FAQ schema, page scripts)</li>
+      <li><a href="https://boringsales.ai/guarantee">/guarantee</a> · <a href="https://boringsales.ai/services/">/services</a> · <a href="https://boringsales.ai/terms">/terms</a> · <a href="https://boringsales.ai/privacy">/privacy</a> · <a href="https://boringsales.ai/data-deletion">/data-deletion</a></li>
+      <li>Competitor sources: the linked product names in the matrix above (vendor homepages and pricing pages), plus <a href="https://finance.yahoo.com/news/a16z-benchmark-backed-11x-claiming-230302762.html">TechCrunch via Yahoo on 11x</a>.</li>
+      <li><a href="https://boringsales.ai/robots.txt">/robots.txt</a> · <a href="https://boringsales.ai/sitemap-0.xml">/sitemap-0.xml</a> · <a href="https://app.boringsales.ai/">app.boringsales.ai</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer><div class="wrap"><a href="/setter/">← Witchcraft Setter</a> · internal teardown · not for distribution</div></footer>
+</body>
+</html>

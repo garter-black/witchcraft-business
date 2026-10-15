@@ -1,0 +1,30 @@
+# Witchcraft AI (witchcraft.business)
+
+> The house index of Witchcraft AI, an AI studio based in Sydney, Australia. It lists the live Witchcraft AI surfaces and hosts Witchcraft Setter, an AI appointment setter for high-ticket sales teams.
+
+## Witchcraft Setter
+
+- [Witchcraft Setter](https://witchcraft.business/setter/): AI appointment setter for high-ticket inbound sales teams (coaches, consultants, agencies, clinics, real estate, premium home services). Replies to every opted-in inbound lead on the channel they used (voice, SMS, WhatsApp, Instagram DM, Messenger, email) within about 10 seconds, qualifies them against the closers' criteria, warm-transfers hot leads to a live closer mid-call, books the rest, and runs show-rate reminders and no-show rebooking. Priced per showed call (pilot: 50 USD per showed call, no setup fee, 30-day split-flow pilot). Pre-launch: performance figures are pilot targets, not published results. Inbound and opted-in only; discloses that it is an AI; honours opt-outs on every channel; official APIs only.
+
+## Surfaces
+
+- [witch.codes](https://witch.codes/): ATHENA · 20 agents as endpoints The ATHENA framework and the twenty goddesses. Every agent, one URL. The framework →
+- [witchcraft.expert](https://witchcraft.expert/): Strategy · consulting The operator, in person. Strategy and consulting, on AI and the things around it. The bio →
+- [witchcraft.delivery](https://witchcraft.delivery/): Engagements · fixed scope Engagements, not proposals. Diagnostics, voice receptionists on your line, implementation retainers. The bookings →
+- [witchcraft.homes](https://witchcraft.homes/): Property · valuation · acquisition Hestia's five-lens property guesstimator and the rest of the property desk. Where the money work is. The desk →
+- [guesstimator](https://guesstimator.witchcraft.homes/): Property · AI-guesstimate Five-dimensional property value guesstimator, AI-debated, $22 to $40 per address, PDF by email. The app →
+- [dailydeals](https://dailydeals.witchcraft.homes/): Property · subscription Eos daily-scans the entire Sydney market. Top 0.1% deals for $5,000 a month. The newsletter →
+- [witchcraft.markets](https://witchcraft.markets/): Retail · mass market Mass-market storefront. Volume goods, direct to consumer. The market →
+- [witchcraft.boutique](https://witchcraft.boutique/): Bespoke · commissioned The atelier. Custom-tailored work for businesses and private clients. The commissions →
+- [witchcraft.pics](https://witchcraft.pics/): Image · generative One-click prompt to photoreal image. Cheaper than Higgsfield, more advanced yet jankier. The studio →
+- [video.witchcraft.pics](https://video.witchcraft.pics/): Video · music One-click music video machine. Drop a track, get a film back. The machine →
+- [witchcraft.recipes](https://witchcraft.recipes/): Whitepapers · method Reproducible methods, published and audited, from the research arms. The cookbook →
+- [witchcraft.living](https://witchcraft.living/): Embodiment · robotics Priscilla Robots. Brain-building project, personal assistant robotics, sentient home. The living →
+- [witchcraft.love](https://witchcraft.love/): Companionship Company, not therapy. Companionship for isolation, ageing and trauma contexts. Human escalation built in. The line →
+- [witchcraft.beauty](https://witchcraft.beauty/): Robotics · SFW and NSFW Companion robotics. The obsidian atelier - Garter Dolls, presented in the long line. The atelier →
+- [witchcraft.video](https://witchcraft.video/): 
+
+## Contact
+
+- Email: hecate@witch.codes
+- Location: Sydney, Australia

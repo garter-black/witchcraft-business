@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Witchcraft Closers | Talk to Artemis</title>
+<meta name="description" content="Artemis is the AI sales rep at Witchcraft Business. Talk to her live, or ask her to play your after-hours line: full intake, consult booked, summary to your team within a minute.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://witchcraft.business/closers/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Witchcraft Closers">
+<meta property="og:title" content="Talk to Artemis | Every call answered, every intake done">
+<meta property="og:description" content="Ask her to play your after-hours line. First week free.">
+<meta name="theme-color" content="#06060A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/setter/setter.css?v=4">
+<link rel="stylesheet" href="/closers/closers.css?v=1">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Witchcraft Closers home"><svg class="sigil spin3d" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="1"/><path d="M16 3v26M3 16h26" stroke="currentColor" stroke-width=".6" opacity=".5"/><path d="M9 23 L23 9 M19 9h4v4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>Witchcraft <em>Closers</em></a>
+    <ul>
+      <li><a href="#call">Talk to Artemis</a></li>
+      <li><a href="#what">What you get</a></li>
+      <li><a href="#price">Price</a></li>
+    </ul>
+    <a class="btn rose sm" href="#start">Start the free week</a>
+  </div>
+</nav>
+
+<main id="main">
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span><span id="forWho">AI front desk · live demo</span></p>
+      <h1 class="kinetic" id="headline" aria-label="Every call answered. Every intake done. Before they call someone else.">
+        <span class="l1">Every call answered.</span>
+        <span class="l2" id="h2line">Every <em>intake</em> done.</span>
+        <span class="l3" id="h3line">Before they call someone else.</span>
+      </h1>
+      <p class="lede" id="hookLine">Artemis is our AI sales rep. Talk to her, or ask her to play your after-hours line and hear exactly what your callers would get.</p>
+      <div class="ctas">
+        <a class="btn rose" href="#call" id="heroTalk">Talk to Artemis →</a>
+        <a class="btn ghost" href="#start">Start the free week</a>
+      </div>
+      <p class="tiny mono dim hero-note">She says she's an AI. Nothing here calls or texts you.</p>
+    </div>
+
+    <div id="call" class="call-wrap">
+      <div class="phone" id="phone" data-state="idle">
+        <div class="phone-top">
+          <span class="rec"><span class="live-dot"></span><span id="callState">Ready</span></span>
+          <span class="mono" id="callClock">00:00</span>
+        </div>
+        <div class="stage" id="stage">
+          <div class="avatar-host" id="avatarHost" aria-hidden="true"></div>
+          <div class="portrait" id="portrait" aria-hidden="true">
+            <svg viewBox="0 0 200 200"><defs><radialGradient id="pg" cx="50%" cy="38%" r="60%"><stop offset="0" stop-color="#3a2230"/><stop offset="1" stop-color="#07070b"/></radialGradient></defs><rect width="200" height="200" fill="url(#pg)"/><circle cx="100" cy="82" r="30" fill="#24161f"/><path d="M40 200c6-44 32-66 60-66s54 22 60 66" fill="#24161f"/></svg>
+            <canvas id="wave" class="wave"></canvas>
+          </div>
+          <div class="incoming" id="intro">
+            <p class="mono small" id="introFor">Witchcraft Business</p>
+            <p class="who">Artemis <span>AI sales rep · live</span></p>
+            <p class="mono tiny intro-tip">Tip: say “demo” and she becomes your after-hours line.</p>
+            <button class="btn rose" id="bigStart" type="button">Talk to her</button>
+          </div>
+          <div class="load" id="loadMsg" hidden></div>
+          <p class="captions" id="captions" aria-live="polite"></p>
+        </div>
+        <div class="chips" id="chips"></div>
+        <form class="say" id="sayForm" autocomplete="off">
+          <input id="sayIn" placeholder="Type to Artemis…" aria-label="Type a message to Artemis" disabled>
+          <button type="submit" disabled id="sayBtn">Say</button>
+        </form>
+        <div class="phone-foot">
+          <button class="btn rose sm" id="startBtn" type="button">Start</button>
+          <button class="btn sm ghost" id="muteBtn" type="button" hidden aria-pressed="false">Mute mic</button>
+          <label class="tog"><input type="checkbox" id="faceTog" checked> Live face</label>
+          <span class="tiny mono dim" id="modeNote">Voice: ElevenLabs · Face: Spatius</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="strip" aria-label="Key numbers">
+  <div class="wrap strip-grid">
+    <div><b>24/7</b><span>answered in your name</span></div>
+    <div><b>~1 min</b><span>summary to your team</span></div>
+    <div><b>48 h</b><span>to set up</span></div>
+    <div><b>7 days</b><span>free on your after-hours line</span></div>
+  </div>
+</section>
+
+<section id="what" class="comp">
+  <div class="wrap">
+    <p class="eyebrow">What you get</p>
+    <h2>What your 11pm caller <em>gets.</em></h2>
+    <div class="cols3">
+      <div><h3 id="w1h">A full intake</h3><p id="w1p">What happened and when, injuries, treatment so far, insurance, fault, any other lawyer. Asked kindly, one question at a time.</p></div>
+      <div><h3>Booked on your calendar</h3><p>A consult time that suits them, straight into your schedule. No phone tag.</p></div>
+      <div><h3>Summary in a minute</h3><p>Your team gets the details by email or text within about a minute of the call ending.</p></div>
+      <div><h3>Says it's an AI</h3><p>Up front, every call. A person takes over whenever the caller asks.</p></div>
+      <div><h3>Your script</h3><p>Trained on your website and your questions. Your tone, your rules, your answers.</p></div>
+      <div><h3>Your data</h3><p>Recordings and transcripts are yours and are never used for anyone else.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="price" class="pricing">
+  <div class="wrap">
+    <p class="eyebrow">Price</p>
+    <h2>One price. <em>First week free.</em></h2>
+    <div class="cols3 price-cols">
+      <div><p class="mono tiny dim">Week one</p><p class="price">$0</p><p>Live on your after-hours line for 7 days. Keep it or walk away.</p></div>
+      <div><p class="mono tiny dim">Setup, once</p><p class="price">$2,500</p><p>Trained on your site and intake questions. Phone line and calendar connected in about 48 hours.</p></div>
+      <div><p class="mono tiny dim">Monthly</p><p class="price">$997 <small>/ mo</small></p><p>Three-month minimum, then month to month. Every call, all hours.</p></div>
+    </div>
+    <p class="note">USD. Ask Artemis what one new client is worth to you and let her do the maths with you.</p>
+  </div>
+</section>
+
+<section id="start" class="pilot">
+  <div class="wrap pilot-grid">
+    <div>
+      <p class="eyebrow">Start the free week</p>
+      <h2>Leave your details. <em>Rio does the rest.</em></h2>
+      <p class="lede">Rio Kho sets up every line personally and emails you within one business day. Sydney is a day ahead of the US.</p>
+      <ul class="ticks">
+        <li>Live on your after-hours line in about 48 hours</li>
+        <li>Nothing else changes in your office</li>
+        <li>Stop in week one and pay nothing</li>
+      </ul>
+    </div>
+    <form class="lead-form" id="bookForm" novalidate>
+      <div class="two">
+        <label>Name<input name="name" required autocomplete="name"></label>
+        <label>Role<input name="role" autocomplete="organization-title" placeholder="e.g. managing partner"></label>
+      </div>
+      <div class="two">
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="optional"></label>
+      </div>
+      <div class="two">
+        <label>I want<select name="want"><option value="free_week">The free week</option><option value="walkthrough">A 15-minute walkthrough</option><option value="question">To ask a question</option></select></label>
+        <label>Good time<input name="best_time" placeholder="e.g. Tue 10am Pacific"></label>
+      </div>
+      <label>Anything Rio should know<input name="notes" placeholder="optional"></label>
+      <label class="hp" aria-hidden="true">Leave empty<input name="hp" tabindex="-1" autocomplete="off"></label>
+      <label class="consent"><input type="checkbox" name="consent" required> <span>Witchcraft Business may email me about this. I can opt out any time by replying "no".</span></label>
+      <button class="btn rose" type="submit" id="bookBtn">Send to Rio</button>
+      <p class="form-msg" id="bookMsg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section id="rules" class="comp">
+  <div class="wrap">
+    <p class="eyebrow">How she behaves</p>
+    <h2>Disclosed AI. <em>Never cold.</em></h2>
+    <div class="cols3">
+      <div><h3>Says so first</h3><p>Every caller hears that it's an AI before anything else.</p></div>
+      <div><h3>Human on request</h3><p>Transfers or takes a message for a person whenever asked.</p></div>
+      <div><h3>No advice</h3><p>Takes details and books. Never gives legal, medical or financial advice.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div><b class="brand-f">Witchcraft <em>Closers</em></b><br>A <a href="https://witchcraft.business/">witchcraft.business</a> product · Sydney, Australia · <a href="mailto:hecate@witch.codes">hecate@witch.codes</a></div>
+    <div class="mono tiny dim">v1 · 29 Sep 2026 · partner of <a href="/setter/">Witchcraft Setter</a></div>
+  </div>
+</footer>
+
+<script src="/closers/app.js?v=2" defer></script>
+</body>
+</html>

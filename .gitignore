@@ -1,0 +1,15 @@
+# estate source of truth - witchcraft-business
+# source only: build artifacts, deps, secrets and ALL media are excluded
+functions/closers/_data.js
+pages/assets/
+pages/setter/voice/
+pages/setter/avatar/
+media/
+assets/
+dist/
+node_modules/
+.wrangler/
+.dev.vars
+.dev.vars.*
+.env
+.env.*
