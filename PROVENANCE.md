@@ -32,7 +32,7 @@ tests/parity.mjs                           the deployed-vs-Functions parity chec
 | Path | Why |
 |---|---|
 | `functions/closers/_data.js` | 67,694 B of **third-party personal data** — real prospect names, emails, phones and pre-written cold-email bodies harvested from US law firms' own websites (built 29 Sep 2026). Plan §1: roster/customer data never enters git. Also gitignored by path. |
-| `workers/umbra-spatius/` | A **separate Workers service**, not this Pages project (own `wrangler.toml`, `workers_dev = true`). It also lists `theblackgarter.com.au` in its CORS origin allowlist, which the sweep's hard rule forbids committing. Source remains at `WEBSITES/witchcraft-business-project/umbra-spatius/`. |
+| `workers/umbra-spatius/` | A **separate Workers service**, not this Pages project (own `wrangler.toml`, `workers_dev = true`). It also lists the forbidden domain in its CORS origin allowlist, which the sweep's hard rule forbids committing. Source remains at `WEBSITES/witchcraft-business-project/umbra-spatius/`. |
 | `pages/assets/` (19 PNG/JPG), `pages/setter/voice/` (21 PCM), `pages/setter/avatar/` | Media and pre-rendered audio — 53 files, 12,773,506 B. Live and verified; they live in R2/object storage per plan §1. |
 
 ## Secrets
